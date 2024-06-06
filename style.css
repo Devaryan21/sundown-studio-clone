@@ -1,0 +1,755 @@
+@font-face{
+  font-family: new;
+  src: url(./NeueHaasDisplayLight\ \(1\).ttf);
+}
+
+@font-face{
+    font-family: newmed;
+    src: url(./NeueHaasDisplayMediu\ \(1\).ttf);
+}
+
+@font-face {
+    font-family: newroman;
+    src: url(./NeueHaasDisplayRoman\ \(1\).ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: newroman;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    position: relative;
+    /* z-index: 9; */
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3 ;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 2vw;
+    position: relative;
+    z-index:99;
+    background-color:#efeae3;
+}
+nav h3{
+    display: none;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    z-index:99;
+    
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.299);
+    border-radius: 50px;
+    font-size: 18px;
+    position: relative;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius:0;
+}
+
+#nav-part2 h4 a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    z-index:8;
+}
+#nav-part2 h4 a:hover{
+    color: white;
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom:2.5vw;
+}
+#left h3{
+    width: 25vw;
+    font-size:1.8vw;
+    line-height: 2vw;
+}
+
+#center h1{
+    font-size: 9vw;
+    line-height: 8vw;
+    text-align: right;
+    font-weight:1000;
+}
+
+#page1 video{
+   width: 100%;
+   border-radius:20px;
+   margin-top: 4vw;
+   position: relative;
+}
+
+#hero-shape{
+    width: 40vw;
+    height: 34vw;
+    background-color:#FE320A;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right:0;
+    top: 65vh;
+    filter: blur(20px);
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation: anime2;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate ;
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation: anime1;
+    animation-duration:3s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate ;
+}
+
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-2%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+    
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+    }
+    to{
+        transform: translate(-20%,20%);
+    }
+    
+}
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-2%);
+    }
+    to{
+        transform: translate(0%,10%);
+    }
+    
+}
+
+/* -------------page2---------------------- */
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color:#efeae3 ;
+    padding: 8vw 0;
+    position: relative;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x:auto ;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+
+#gola{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name:move ;
+    animation-duration:10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+    
+}
+
+#page2-bottom{
+    height: 60vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw;
+    position: relative;
+    z-index: 9;
+}
+#page2-bottom h1{
+    font-size:3.5vw;
+    width: 50%;
+}
+#bottom-part2{
+    width: 25%;
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px
+    ;
+}
+#bottom-part2 p{
+    font-family: new;
+    /* font-weight: 100; */
+    margin-top: 1vw;
+}
+
+#page2 #gooey{
+    height:28vw;
+    width: 28vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top, #FE320A,#fe5b0a);
+    top: 55%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out ;
+}
+
+@keyframes gooey {
+    from{
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        transform: translate(-10%, 10%) skew(12deg);
+    }
+}
+
+#page3{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #efeae3;
+    padding: 5vw 0;
+}
+
+.elem{
+    position: relative;
+    height: 140px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.436);
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    padding:0 2vw;
+    overflow: hidden;
+}
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+    position: relative;
+}
+
+.overlay{
+   height: 100%;
+   width: 100%;
+   background-color:orange;
+   left: 0;
+   position: absolute;
+   top: -100%;
+   transition: all ease 0.2s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-image{
+    height: 29vw;
+    width: 23vw;
+    background-color: red;
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top:27%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+/* -------------page4----------------------- */
+
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    font-family: newmed;
+    /* padding: 4vw; */
+}
+#page4-container{
+    display: flex;
+    height: 95vh;
+    width: 96%;
+    background-color:black;
+    /* padding: 1vw 1vw; */
+    margin-left: 2vw;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#p4-left{
+  height: 100%;
+  width: 35%;
+  background-color: black;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  justify-content: center;
+}
+
+#p4-left h2{
+font-size: 3vw;
+line-height: 1;
+padding-left:25%;
+}
+
+#p4-left h3{
+    font-size: 3vw;
+    line-height: 1;
+    padding-left:25%;
+    color: grey;
+}
+
+#p4-left p{
+    margin-top: 1.5vw;
+    padding-left: 25%;
+    font-size: .8vw;
+}
+
+#p4-right{
+    height: 100%;
+    width: 65%;
+}
+#p4-right img{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* ---------------------page5------------------------ */
+
+#page5 {
+    height:70vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 6vw 2vw;
+}
+#footer{
+    height: 90vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* padding:0 3vw; */
+    flex-direction: column;
+}
+
+#footer h1{
+    font-size: 23vw;
+
+}
+
+#footer-div{
+    height: 20vh;
+    width:100%;
+    background-color: #FE320A;
+    display: flex;
+    top:0;
+}
+
+#footer-bottom{
+    border-top: 1px solid #dadada;
+    height: 10vh;
+    width: 100%;
+}
+
+#footer-left{
+    height: 100%;
+    width: 70%;
+    /* background-color:#fe5b0a; */
+    padding-left: 5vw;
+    padding-top: 4vw;
+    z-index: 9;
+}
+#footer-left h3{
+    bottom: 0;
+}
+#footer-right{
+    height: 100%;
+    width: 30%;
+    /* background-color:greenyellow; */
+    padding-left: 2vw;
+    padding-top: 3vw;
+    z-index: 9;
+}
+#footer-right input{
+  margin-top: 1vw;
+  padding: 0.4vw;
+  border-bottom: 1px solid #dadada;
+  border: none;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.203);
+  color: white;
+
+}
+
+#f-gooy{
+    height: 22vh;
+    width: 100%;
+    border-radius: 100px;
+    filter: blur(20px);
+    background-color:#fe5b0a;
+    position: absolute;
+    
+}
+#f-gooey0{
+    height: 31vh;
+    width:45%;
+    border-radius: 100px;
+    filter: blur(10px);
+    background-color:#FE320A;
+    z-index: 2;
+    position: absolute;
+    animation-name:gooey0-anime ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#f-gooey1{
+    height: 31vh;
+    width:45%;
+    border-radius: 100px;
+    filter: blur(10px);
+    background-color:#FE320A;
+    position: absolute;
+    animation-name:gooey1-anime ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#f-gooey2{
+    height: 31vh;
+    width:35%;
+    border-radius: 100px;
+    /* filter: blur(20px); */
+    background-color:#FE320A;
+    position: absolute;
+    left: 35%;
+    animation-name:gooey2-anime ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#f-gooey3{
+    height: 31vh;
+    width:50%;
+    border-radius: 100px;
+    /* filter: blur(20px); */
+    right: 0;
+    background-color:#FE320A;
+    position: absolute;
+    animation-name:gooey3-anime;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes gooey0-anime {
+    from{
+        transform: translate(0%,10%);
+    }
+    to{
+        transform: translate(-10%,40%);
+    }
+}
+@keyframes gooey1-anime {
+    from{
+        transform: translate(20%,10%);
+    }
+    to{
+        transform: translate(0%,50%);
+    }
+}
+@keyframes gooey2-anime {
+    from{
+        transform: translate(20%,-2%);
+    }
+    to{
+        transform: translate(0%,20%);
+    }
+}
+@keyframes gooey3-anime {
+    from{
+        transform: translate(0%,10%);
+    }
+    to{
+        transform: translate(10%,40%);
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background:#efeae3;
+    border-left: 1px solid #0000007e;
+    padding-left:2vw ;
+  }
+  .swiper-slide p{
+    margin-top: 1vw;
+    width: 70%;
+  }
+
+
+ .swiper-wrapper .swiper-slide{
+    width:30%;
+  }
+
+  /* ------------media-screen-------------------- */
+
+  @media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 2vw;
+    }
+    
+    nav{
+        width: 100%;
+        padding: 8vw 5vw;
+        background-color: #efeae3;
+    }
+
+    nav h3{
+        display: block;
+        padding: 2vw 4vw;
+        padding-left:8vw;
+        border: 1px solid rgba(0, 0, 0, 0.521);
+        border-radius: 50px;
+        font-size: 3.5vw;
+        
+    }
+
+    nav img{
+        height:7vh;
+        transition: all ease 0.5s;
+    }
+  
+    #full-scr{
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.447);
+        position: fixed;
+        z-index:20;
+        top: -100%;
+        transition: all ease 0.6s;
+    }
+    
+    #full-div1{
+        height: 50%;
+        width: 100%;
+        background-color: #efeae3;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+#nav-part2{
+    display: none;
+    
+}
+
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom:2.5vw;
+    /* background-color: rebeccapurple; */
+    /* flex-direction: column-reverse; */
+}
+#left h3{
+    width: 45vw;
+    font-size:5.8vw;
+    line-height: 5vw;
+}
+
+#center h1{
+    font-size: 9vw;
+    line-height: 8vw;
+    text-align: right;
+    font-weight:1000;
+    flex-direction: column-reverse; 
+    padding-bottom: 34vw;
+}
+
+#page1 video{
+   width: 100%;
+   border-radius:20px;
+   margin-top: 4vw;
+   position: relative;
+}
+
+#hero-shape{
+    width: 40vw;
+    height: 34vw;
+    background-color:#FE320A;
+    position: absolute;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right:0;
+    top: 65vh;
+    filter: blur(20px);
+}
+
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+    animation: anime2;
+    animation-duration:5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate ;
+}
+
+#hero-3{
+    height: 30vw;
+    width: 30vw;
+    background-color: #FE320A;
+    border-top-left-radius:50% ;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    animation: anime1;
+    animation-duration:3s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate ;
+}
+
+  }
